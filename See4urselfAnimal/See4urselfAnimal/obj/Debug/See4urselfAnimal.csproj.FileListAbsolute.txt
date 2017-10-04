@@ -7,3 +7,13 @@ E:\Data\GitHub\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debu
 E:\Data\GitHub\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.csproj.GenerateResource.Cache
 E:\Data\GitHub\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.exe
 E:\Data\GitHub\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.pdb
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\bin\Debug\See4urselfAnimal.exe.config
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\bin\Debug\See4urselfAnimal.exe
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\bin\Debug\See4urselfAnimal.pdb
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.csprojResolveAssemblyReference.cache
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.Form1.resources
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.Properties.Resources.resources
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.csproj.GenerateResource.Cache
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.csproj.CoreCompileInputs.cache
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.exe
+E:\Github\so-thu-sai-gon-mmeanzz\See4urselfAnimal\See4urselfAnimal\obj\Debug\See4urselfAnimal.pdb

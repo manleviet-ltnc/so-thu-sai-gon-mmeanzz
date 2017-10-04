@@ -105,6 +105,20 @@ namespace See4urselfAnimal
             }
             return result;
         }
+
+        private static string GetDayToString(string d)
+        {
+            string result = "";
+            switch (d)
+            {
+                case "1": result = "1st"; break;
+                case "2": result = "2nd"; break;
+                case "3": result = "3rd"; break;
+                default: result = d+"th"; break;
+            }
+            return result;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblTime.Text = string.Format("Now is {0}:{1}:{2} {3}-{4}-{5}",
@@ -112,7 +126,7 @@ namespace See4urselfAnimal
                                         DateTime.Now.Minute,
                                         DateTime.Now.Second,
                                         GetMonthToString((DateTime.Now.Month).ToString()),
-                                        DateTime.Now.Day,
+                                        GetDayToString((DateTime.Now.Day).ToString()),
                                         DateTime.Now.Year);
         }
 
