@@ -141,9 +141,14 @@ namespace See4urselfAnimal
            
                 lstAnimalList.Items.Remove(lstAnimalList.SelectedItem);
         }
+
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
-           
+            StreamWriter write = new StreamWriter("AnimalsList.txt");
+            if (write == null) return;
+            foreach (var item in lstAnimalList.Items)
+                write.WriteLine(item.ToString());
+            write.Close();
         }
     }
 
