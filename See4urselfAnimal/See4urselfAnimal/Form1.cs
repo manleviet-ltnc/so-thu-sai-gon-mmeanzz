@@ -27,11 +27,11 @@ namespace See4urselfAnimal
         {
             ListBox lb = (ListBox)sender;
             int index = lb.IndexFromPoint(e.X, e.Y);
-            if (index!=-1)
+            if (index != -1)
                 lb.DoDragDrop(lb.Items[index].ToString(), DragDropEffects.Copy);
         }
 
-        private void ListBox_DragEnter(object sender,DragEventArgs e)
+        private void ListBox_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
                 e.Effect = DragDropEffects.Copy;
@@ -41,14 +41,14 @@ namespace See4urselfAnimal
 
         private void lstAnimalList_DragDrop(object sender, DragEventArgs e)
         {
-            if(e.Data.GetDataPresent(DataFormats.Text))
+            if (e.Data.GetDataPresent(DataFormats.Text))
             {
                 ListBox lb = (ListBox)sender;
                 lb.Items.Add(e.Data.GetData(DataFormats.Text));
             }
         }
 
-        private void Save(object sender,EventArgs e)
+        private void Save(object sender, EventArgs e)
         {
             // Open file
             StreamWriter write = new StreamWriter("AnimalsList.txt");
@@ -58,31 +58,32 @@ namespace See4urselfAnimal
             write.Close();
         }
 
- 
+
         private void mnuExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
         private void mnuLoad_Click(object sender, EventArgs e)
-        {          
-                StreamReader reader = new StreamReader("NewAnimals.txt");
-                if (reader == null) return;
-                string input;
-                while ((input = reader.ReadLine()) != null)
-                {
-                    lstNewAnimals.Items.Add(input);
-                }
-                reader.Close();
+        {
+            
+            StreamReader reader = new StreamReader("NewAnimals.txt");
+            if (reader == null) return;
+            string input;
+            while ((input = reader.ReadLine()) != null)
+            {
+                lstNewAnimals.Items.Add(input);
+            }
+            reader.Close();
 
-                using (StreamReader rs = new StreamReader("AnimalsList.txt"))
+            using (StreamReader rs = new StreamReader("AnimalsList.txt"))
+            {
+                input = null;
+                while ((input = rs.ReadLine()) != null)
                 {
-                    input = null;
-                    while ((input = rs.ReadLine()) != null)
-                    {
-                        lstAnimalList.Items.Add(input);
-                    }
-                }         
+                    lstAnimalList.Items.Add(input);
+                }
+            }
         }
 
         private static string GetMonthToString(string m)
@@ -99,9 +100,9 @@ namespace See4urselfAnimal
                 case "7": result = "Jul"; break;
                 case "8": result = "Aug"; break;
                 case "9": result = "Sep"; break;
-                case "10":result = "Oct"; break;
-                case "11":result = "Nov"; break;
-                case "12":result = "Dec"; break;
+                case "10": result = "Oct"; break;
+                case "11": result = "Nov"; break;
+                case "12": result = "Dec"; break;
             }
             return result;
         }
@@ -114,7 +115,7 @@ namespace See4urselfAnimal
                 case "1": result = "1st"; break;
                 case "2": result = "2nd"; break;
                 case "3": result = "3rd"; break;
-                default: result = d+"th"; break;
+                default: result = d + "th"; break;
             }
             return result;
         }
@@ -134,5 +135,16 @@ namespace See4urselfAnimal
         {
             timer1.Enabled = true;
         }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+           
+                lstAnimalList.Items.Remove(lstAnimalList.SelectedItem);
+        }
+        private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
+        {
+           
+        }
     }
+
 }
