@@ -144,6 +144,7 @@ namespace See4urselfAnimal
 
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
+           
             StreamWriter write = new StreamWriter("AnimalsList.txt");
             if (write == null) return;
             foreach (var item in lstAnimalList.Items)

@@ -70,7 +70,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 0);
+            this.label2.Location = new System.Drawing.Point(249, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 1;
@@ -83,7 +83,7 @@
             this.lstNewAnimals.FormattingEnabled = true;
             this.lstNewAnimals.Location = new System.Drawing.Point(3, 16);
             this.lstNewAnimals.Name = "lstNewAnimals";
-            this.lstNewAnimals.Size = new System.Drawing.Size(146, 154);
+            this.lstNewAnimals.Size = new System.Drawing.Size(162, 154);
             this.lstNewAnimals.TabIndex = 2;
             this.toolTip1.SetToolTip(this.lstNewAnimals, "Click and Drag to AnimalList to create Zoo");
             this.lstNewAnimals.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
@@ -94,9 +94,9 @@
             this.lstAnimalList.AllowDrop = true;
             this.lstAnimalList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstAnimalList.FormattingEnabled = true;
-            this.lstAnimalList.Location = new System.Drawing.Point(225, 16);
+            this.lstAnimalList.Location = new System.Drawing.Point(249, 16);
             this.lstAnimalList.Name = "lstAnimalList";
-            this.lstAnimalList.Size = new System.Drawing.Size(150, 154);
+            this.lstAnimalList.Size = new System.Drawing.Size(166, 154);
             this.lstAnimalList.TabIndex = 3;
             this.lstAnimalList.SelectedIndexChanged += new System.EventHandler(this.btnRemove_Click);
             this.lstAnimalList.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstAnimalList_DragDrop);
@@ -108,7 +108,7 @@
             this.btnPick.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnPick.Location = new System.Drawing.Point(3, 45);
             this.btnPick.Name = "btnPick";
-            this.btnPick.Size = new System.Drawing.Size(58, 29);
+            this.btnPick.Size = new System.Drawing.Size(66, 29);
             this.btnPick.TabIndex = 4;
             this.btnPick.Text = "Pick";
             this.btnPick.UseVisualStyleBackColor = true;
@@ -120,7 +120,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.ImageIndex = 0;
             this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(318, 206);
+            this.btnSave.Location = new System.Drawing.Point(358, 206);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(57, 34);
             this.btnSave.TabIndex = 5;
@@ -149,6 +149,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTime, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -156,7 +157,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 243);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(418, 243);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTime
@@ -176,12 +177,12 @@
             this.tableLayoutPanel2.Controls.Add(this.btnPick, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnRemove, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(155, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(171, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(64, 154);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(72, 154);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // btnRemove
@@ -189,7 +190,7 @@
             this.btnRemove.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRemove.Location = new System.Drawing.Point(3, 80);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(58, 29);
+            this.btnRemove.Size = new System.Drawing.Size(66, 29);
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
