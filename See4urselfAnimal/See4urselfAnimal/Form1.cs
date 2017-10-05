@@ -20,7 +20,7 @@ namespace See4urselfAnimal
 
         private void btnPick_Click(object sender, EventArgs e)
         {
-            lstAnimalList.Items.Add(lstNewAnimals.SelectedItem);
+            //lstAnimalList.Items.Add(lstNewAnimals.SelectedItem);
         }
 
         private void ListBox_MouseDown(object sender, MouseEventArgs e)
@@ -44,7 +44,8 @@ namespace See4urselfAnimal
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
                 ListBox lb = (ListBox)sender;
-                lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                //if (lb != lstAnimalList)
+                    lb.Items.Add(e.Data.GetData(DataFormats.Text));
             }
         }
 
@@ -144,7 +145,6 @@ namespace See4urselfAnimal
 
         private void Form1_FormClosing(Object sender, FormClosingEventArgs e)
         {
-           
             StreamWriter write = new StreamWriter("AnimalsList.txt");
             if (write == null) return;
             foreach (var item in lstAnimalList.Items)
