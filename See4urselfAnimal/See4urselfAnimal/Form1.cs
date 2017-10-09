@@ -20,16 +20,22 @@ namespace See4urselfAnimal
 
         private void btnPick_Click(object sender, EventArgs e)
         {
-            //lstAnimalList.Items.Add(lstNewAnimals.SelectedItem);
+            lstAnimalList.Items.Add(lstNewAnimals.SelectedItem);
+
         }
 
         private void ListBox_MouseDown(object sender, MouseEventArgs e)
         {
             ListBox lb = (ListBox)sender;
             int index = lb.IndexFromPoint(e.X, e.Y);
-            if (index != -1)
-                lb.DoDragDrop(lb.Items[index].ToString(), DragDropEffects.Copy);
+
+            if (index != -1 && lb!=lstAnimalList)
+            {               
+                DragDropEffects effect = lb.DoDragDrop(lb.Items[index].ToString(),
+                    DragDropEffects.Copy);            
+            }
         }
+
 
         private void ListBox_DragEnter(object sender, DragEventArgs e)
         {
@@ -43,9 +49,27 @@ namespace See4urselfAnimal
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
-                ListBox lb = (ListBox)sender;
-                //if (lb != lstAnimalList)
-                    lb.Items.Add(e.Data.GetData(DataFormats.Text));
+                if (lstAnimalList.Items.Contains(e.Data.GetData(DataFormats.Text)))
+                {
+                    lstAnimalList.AllowDrop = false;
+                    lstAnimalList.AllowDrop = true;
+                }
+                else
+                {
+
+                    int index = lstAnimalList.IndexFromPoint(lstAnimalList.PointToClient(
+                                                                new Point(e.X, e.Y)));
+                    if (index >= 0 && index < lstAnimalList.Items.Count)
+                    {
+                        lstAnimalList.Items.Insert(index,
+                         e.Data.GetData(DataFormats.Text));
+                    }
+                    else
+                    {
+                        // add the selected string to bottom of list
+                        lstAnimalList.Items.Add(e.Data.GetData(DataFormats.Text));
+                    }
+                }
             }
         }
 

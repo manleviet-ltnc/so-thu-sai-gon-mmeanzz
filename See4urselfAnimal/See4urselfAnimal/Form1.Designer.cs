@@ -53,6 +53,7 @@
             this.mnuCut = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPaste = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -70,7 +71,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 0);
+            this.label2.Location = new System.Drawing.Point(214, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 1;
@@ -83,7 +84,7 @@
             this.lstNewAnimals.FormattingEnabled = true;
             this.lstNewAnimals.Location = new System.Drawing.Point(3, 16);
             this.lstNewAnimals.Name = "lstNewAnimals";
-            this.lstNewAnimals.Size = new System.Drawing.Size(146, 154);
+            this.lstNewAnimals.Size = new System.Drawing.Size(138, 97);
             this.lstNewAnimals.TabIndex = 2;
             this.toolTip1.SetToolTip(this.lstNewAnimals, "Click and Drag to AnimalList to create Zoo");
             this.lstNewAnimals.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
@@ -94,19 +95,20 @@
             this.lstAnimalList.AllowDrop = true;
             this.lstAnimalList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstAnimalList.FormattingEnabled = true;
-            this.lstAnimalList.Location = new System.Drawing.Point(225, 16);
+            this.lstAnimalList.Location = new System.Drawing.Point(214, 16);
             this.lstAnimalList.Name = "lstAnimalList";
-            this.lstAnimalList.Size = new System.Drawing.Size(150, 154);
+            this.lstAnimalList.Size = new System.Drawing.Size(143, 97);
             this.lstAnimalList.TabIndex = 3;
             this.lstAnimalList.DragDrop += new System.Windows.Forms.DragEventHandler(this.lstAnimalList_DragDrop);
             this.lstAnimalList.DragEnter += new System.Windows.Forms.DragEventHandler(this.ListBox_DragEnter);
+            this.lstAnimalList.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ListBox_MouseDown);
             // 
             // btnPick
             // 
             this.btnPick.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnPick.Location = new System.Drawing.Point(3, 45);
+            this.btnPick.Location = new System.Drawing.Point(3, 16);
             this.btnPick.Name = "btnPick";
-            this.btnPick.Size = new System.Drawing.Size(58, 29);
+            this.btnPick.Size = new System.Drawing.Size(55, 29);
             this.btnPick.TabIndex = 4;
             this.btnPick.Text = "Pick";
             this.btnPick.UseVisualStyleBackColor = true;
@@ -118,7 +120,7 @@
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSave.ImageIndex = 0;
             this.btnSave.ImageList = this.imageList1;
-            this.btnSave.Location = new System.Drawing.Point(318, 206);
+            this.btnSave.Location = new System.Drawing.Point(300, 149);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(57, 34);
             this.btnSave.TabIndex = 5;
@@ -147,6 +149,7 @@
             this.tableLayoutPanel1.Controls.Add(this.btnSave, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.lblTime, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -154,14 +157,14 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 243);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(360, 186);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // lblTime
             // 
             this.lblTime.AutoSize = true;
             this.tableLayoutPanel1.SetColumnSpan(this.lblTime, 2);
-            this.lblTime.Location = new System.Drawing.Point(3, 173);
+            this.lblTime.Location = new System.Drawing.Point(3, 116);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(57, 13);
             this.lblTime.TabIndex = 6;
@@ -174,20 +177,20 @@
             this.tableLayoutPanel2.Controls.Add(this.btnPick, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnRemove, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(155, 16);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(147, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(64, 154);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(61, 97);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
             // btnRemove
             // 
             this.btnRemove.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRemove.Location = new System.Drawing.Point(3, 80);
+            this.btnRemove.Location = new System.Drawing.Point(3, 51);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(58, 29);
+            this.btnRemove.Size = new System.Drawing.Size(55, 29);
             this.btnRemove.TabIndex = 9;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -200,7 +203,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(418, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(360, 24);
             this.menuStrip1.TabIndex = 7;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -248,7 +251,8 @@
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCopy,
             this.mnuCut,
-            this.mnuPaste});
+            this.mnuPaste,
+            this.deleteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.editToolStripMenuItem.Text = "Edit";
@@ -257,41 +261,50 @@
             // 
             this.mnuCopy.Name = "mnuCopy";
             this.mnuCopy.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.mnuCopy.Size = new System.Drawing.Size(144, 22);
+            this.mnuCopy.Size = new System.Drawing.Size(152, 22);
             this.mnuCopy.Text = "Copy";
             // 
             // mnuCut
             // 
             this.mnuCut.Name = "mnuCut";
             this.mnuCut.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.mnuCut.Size = new System.Drawing.Size(144, 22);
+            this.mnuCut.Size = new System.Drawing.Size(152, 22);
             this.mnuCut.Text = "Cut";
             // 
             // mnuPaste
             // 
             this.mnuPaste.Name = "mnuPaste";
             this.mnuPaste.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.mnuPaste.Size = new System.Drawing.Size(144, 22);
+            this.mnuPaste.Size = new System.Drawing.Size(152, 22);
             this.mnuPaste.Text = "Paste";
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Delete;
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 267);
+            this.ClientSize = new System.Drawing.Size(360, 210);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(272, 235);
+            this.MinimumSize = new System.Drawing.Size(376, 249);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "See4Urself";
+            this.toolTip1.SetToolTip(this, "Look at you!! Just like a fool");
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -329,6 +342,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
 
